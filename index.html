@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <link rel="icon" href="https://www.gstatic.com/images/branding/product/2x/gmail_2020q4_48dp.png" type="image/png">
@@ -135,12 +134,14 @@
     </div>
 
     <div class="smile-popup">
-        <img width="80%"src="https://kjzabinsky.github.io/PrankGamil/20230601_185326.jpg" alt="ERROR LOADING">
+        <img width="60%" src="https://kjzabinsky.github.io/PrankGamil/20230601_185326.jpg" alt="ERROR LOADING">
     </div>
 
     <script>
         setTimeout(function () {
             document.querySelector('.smile-popup').style.display = 'flex';
+            var audio = new Audio('sound.mp3');
+            audio.play();
         }, 7000);
     </script>
 </body>
