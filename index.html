@@ -99,6 +99,23 @@
                 opacity: 0.2;
             }
         }
+
+        /* Additional Styles */
+        .smile-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .smile-icon {
+            font-size: 100px;
+        }
     </style>
 </head>
 <body>
@@ -115,9 +132,13 @@
         <div class="loading-text">We are currently having some technical difficulties, please wait one moment...</div>
     </div>
 
+    <div class="smile-popup">
+        <img src="image.jpg" alt="ERROR LOADING">
+    </div>
+
     <script>
         setTimeout(function () {
-            window.location.href = "https://www.youtube.com";
+            document.querySelector('.smile-popup').style.display = 'flex';
         }, 7000); // 20 seconds
     </script>
 </body>
