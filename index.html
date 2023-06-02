@@ -1,20 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Gmail Embed</title>
+    <title>Google Loading</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .loading-logo {
+            width: 200px;
+            margin-bottom: 16px;
+        }
+
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .loading-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: hop 1s infinite;
+        }
+
+        .loading-dot:nth-child(1) {
+            background-color: #4285f4;
+            animation-delay: 0.1s;
+        }
+
+        .loading-dot:nth-child(2) {
+            background-color: #db4437;
+            animation-delay: 0.2s;
+        }
+
+        .loading-dot:nth-child(3) {
+            background-color: #f4b400;
+            animation-delay: 0.3s;
+        }
+
+        .loading-dot:nth-child(4) {
+            background-color: #0f9d58;
+            animation-delay: 0.4s;
+        }
+
+        @keyframes hop {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .loading-text {
+            font-size: 24px;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        .loading-animation {
+            display: inline-block;
+            animation: loading 1s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                opacity: 0.2;
+            }
+            20% {
+                opacity: 0.4;
+            }
+            40% {
+                opacity: 0.6;
+            }
+            60% {
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.2;
+            }
+        }
+    </style>
 </head>
 <body>
-  <iframe id="gmail-frame" src="https://mail.google.com/" width="100%" height="100%"></iframe>
+    <div class="loading-container">
+        <img class="loading-logo" src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"><br>
+        <div class="loading-dots">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+        </div>
+        <div class="loading-text">Redirecting<span class="loading-animation">...</span></div>
+        <br>
+        <div class="loading-text">We are currently having some technical difficulties, please wait one moment...</div>
+    </div>
 
-  <script>
-    // Function to redirect to YouTube after 30 seconds
-    function redirectToYouTube() {
-      window.location.href = "https://www.youtube.com/";
-    }
-
-    // Wait for 30 seconds and then redirect
-    setTimeout(redirectToYouTube, 30000);
-  </script>
+    <script>
+        setTimeout(function () {
+            window.location.href = "https://www.youtube.com";
+        }, 7000); // 20 seconds
+    </script>
 </body>
 </html>
